@@ -1,0 +1,375 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 20%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 80%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+.h1s{
+    text-align: center
+}
+
+.smaller{
+    width: 15vw
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    color: #2a292a;
+    padding: 3%;
+    box-shadow:1px 2px 4px rgba(0, 0, 0, .2);
+    height: 10vh;
+}
+
+.title{
+	margin-left: 1%;
+	font-weight: 800;
+	font-size: 2vw
+}
+
+.overflow{
+    overflow-x:auto;
+}
+
+.sub_title{
+	font-weight: 100;
+	font-size: 2vw
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    height: 90vh; /* only for demonstration, should be removed */
+    background: #2f2d2e;
+    padding-top: 8%;
+    padding-left: 1%
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+nav li {
+    padding: 4%;
+    margin-right:5%;
+
+}
+
+a{
+	 color: #9b9b9b;
+	 text-decoration: none;
+	 font-size: .9em
+	 
+}
+
+.active:hover{
+	color: #fafafa
+}
+
+.logo-red{
+	position: absolute;
+    bottom: 7%;
+    left: 2%;
+}
+
+.footer{
+	    color: #818181;
+    font-size: 10px;
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+i{
+	padding:2%
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+   
+}
+
+.inline{
+	display: inline-block
+}
+
+.round{
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    background-color: #818181;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-grid;
+    font-size: 12px !important;
+    margin-top:-2% ;
+
+}
+
+.round2{
+	border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 30px;
+    background-color: #818181;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-grid;
+    font-size: 12px !important;
+    margin-top:-2% ;
+    margin-left:2%;
+}
+
+.border-btn{
+	border:2px solid rgba(0,0,0,.4);
+	border-radius:20%;
+	padding:10px;
+	margin:10px;
+}
+
+.left{
+	float:right;
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+section{
+	background-color:#2f2d2e;
+}
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.center{
+	width: 90%;
+	margin:auto;
+}
+
+.height{
+	height: 90vh;
+	position: fixed;
+}
+
+table{
+	width:100%;
+}
+
+th{
+	text-align: left;
+	padding:1.5%;
+}
+
+td{
+	text-align: left;
+	padding:1.5%;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	border-top: 1px solid rgba(0,0,0,.2);
+}
+
+.border-left{
+	border-left: 1px solid rgba(0,0,0,.2);
+
+}
+
+.border-right{
+	border-right: 1px solid rgba(0,0,0,.2);
+
+}
+
+.float-left{
+	float:left;
+}
+
+
+.float-right{
+	float:right;
+}
+
+.text-align-right{
+	text-anchor: right
+}
+
+.text-align-center{
+	text-anchor: center
+}
+
+.clear_float:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.underline{
+	text-decoration: underline;
+}
+
+.sidebar{
+	display: table-cell;
+    vertical-align: top;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  
+}
+
+input {
+	border: none; 
+	width: 270px; 
+	height: 38px;	
+}
+
+::placeholder {
+  	font-weight: 300;
+    font-size:1.2em;
+    padding-left: 2%
+
+}
+
+.content{
+	position: relative;
+    display: table-cell;
+    vertical-align: top;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ 	 .search {
+		border: 1px solid grey; 
+		border-radius: 5px; 
+		width: 300px; 
+		height: 40px;
+		margin-left: 500px;
+		margin-top: 20px;
+		background-color:#fff;
+		float:right;
+		margin: 5px;
+	}
+
+
+ 	.icon{
+ 		color:black;
+ 		background: #fff
+ 	}
+
+ 	.inline{
+ 		display: inline-block;
+ 	}
+
+	
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+select {
+  margin-left:10px;
+  border-radius: 50px;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://i1.wp.com/nationalaccordnewspaper.com/wp-content/uploads/2017/06/UBA.png?fit=2814%2C1322&ssl=1) 96% / 15% no-repeat #eee;
+}
+
+
+/* CAUTION: IE hackery ahead */
+
+
+select::-ms-expand { 
+    display: none; /* remove default arrow in IE 10 and 11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    }
+}
+
+.mobile{
+	display: none
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .round, .round2{
+    	display: none
+    }
+
+    .sidebar{
+    	height: auto
+    }
+
+    .logo-red{
+    	display: none
+    }
+
+    .footer{
+    	display: none
+    }
+
+    .icon{display: none}
+    .search{width: 270px;margin:auto;}
+
+   .dis{display: none}
+   .mobile{
+   	display: block
+   }
+
+   .img{
+       width: 50vw;
+       margin: auto
+   }
+
+
+}
