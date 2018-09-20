@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import Navbar from '../components/nav';
 import Svg from '../components/svg';
-
+import Datefilter from '../components/datepicker';
 
 
 class Dashboard extends Component {
@@ -22,15 +22,10 @@ class Dashboard extends Component {
               <div className="col-12">
 
                 <h2 className="inline">Dashboard</h2>
-                  <select>
-                <option>Today: 20 Apr</option>
-                <option >Yesterday</option>
-                <option>Last 7 Days</option>
-                <option>Last 30 Days</option>
-                <option>This Month</option>
-                <option >Last Month</option>
-                <option>Custom Date</option>
-              </select>
+                &nbsp; &nbsp;
+                <div className='col-2 inline'>
+                    <Datefilter options={['Today', 'Yesterday', 'Last 7 Days', 'Last 30 Days', 'This Month', 'Last Month', 'Custom Range']}/>
+                </div>
               
               <div className="search">
                   <input  type="text" name="text" placeholder="Search"/>
@@ -43,10 +38,10 @@ class Dashboard extends Component {
               <div className="clear_float">
                 <div className="col-6 float-left">
                         <div className="clear_float">
-                          <Svg style='style' title='1,234' para='Registered Customers' color='#c00c00'/>
-                          <Svg style='style2' title='3,456' para='Value of Redemptions' color='#00c3a2'/>
-                          <Svg style='style3' title='6,789' para='Points Redeemed' color='#00c9e0'/>
-                          <Svg style='style4' title='3,450' para='Cash Spend (Debit Card)' color='#6a76ce'/>
+                          <Svg styles='style' title='1,234' para='Registered Customers' color='#c00c00'/>
+                          <Svg styles='style2' title='3,456' para='Value of Redemptions' color='#00c3a2'/>
+                          <Svg styles='style3' title='6,789' para='Points Redeemed' color='#00c9e0'/>
+                          <Svg styles='style4' title='3,450' para='Cash Spend (Debit Card)' color='#6a76ce'/>
                          
 
                         </div>

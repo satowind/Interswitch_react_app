@@ -1,15 +1,12 @@
 import React from 'react';
 
-import {
-  BrowserRouter as 
-  Link
-} from 'react-router-dom'
 
 
-const Svg = ({title,para,style,color})=> {
+
+const Svg = ({title,para,styles,color})=> {
       return (
       
-        <div className={`col2-6 padding ${style}`}>
+        <div className={`col2-6 padding ${styles}`}>
         <h1 className="hch1">{title}</h1>
           <small>{para}</small>
           <br/><br/>

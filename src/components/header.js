@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/rewards-logo.png';
-import images from '../assets/logo-red.png';
+import images from '../assets/download.jpeg';
 
 import {
     BrowserRouter as Router,
@@ -18,7 +18,7 @@ const Header =  ()=> {
              
                   
               <Link className="sato to_red xtra_small float-right margin-right" to='/'> <h4>Log Out</h4></Link>
-              <img className="float-right round2" src={images} width='10vw' alt="hello"/>
+              <img className="float-right round2" src={images} width='12vw' alt="hello"/>
             <span className="float-right round margin-right">🔔</span>
                  
               </div> 

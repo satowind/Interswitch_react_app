@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
-import logo from '../assets/rewards-logo.png';
+
 import './table.css';
-import images from '../assets/logo-red.png';
+
 import Footer from '../components/footer';
 import Header from '../components/header';
 import Navbar from '../components/nav';
 import Td from '../components/td';
+import Datefilter from '../components/datepicker';
+
+
 import {
     BrowserRouter as Router,
     Route,
@@ -21,7 +24,7 @@ class Table extends Component {
         {id: "3", firstname: "emeka", lastname: "gospel", email: "gospel@gmail.com",phone:"0987654321",last_login_date: "thursday"},
         
         {id: "4", firstname: "oge", lastname: "kim", email: "kim@gmail.com",phone:"64310677432",last_login_date: "sunday"},
-        {id: "5", firstname: "philip", lastname: "chino", email: "chino@gmail.com",phone:"09984342211",last_login_date: "wednessday"},
+        {id: "5", firstname: "philip", lastname: "chino", email: "chino@gmail.com",phone:"09984342211",last_login_date: "wednesday"},
         {id: "6", firstname: "tim", lastname: "shino", email: "tim@gmail.com",phone:"02035353211",last_login_date: "sunday"},
         {id: "7", firstname: "andrew", lastname: "bisi", email: "andrew@gmail.com",phone:"0203344678",last_login_date: "monday"},
         {id: "8", firstname: "teslim", lastname: "bola", email: "bola@gmail.com",phone:"01000765464",last_login_date: "tuesday"},
@@ -32,8 +35,8 @@ class Table extends Component {
         {id: "13", firstname: "ogugua", lastname: "inter", email: "inter@gmail.com",phone:"07033435456",last_login_date: "friday"},
         {id: "14", firstname: "yinka", lastname: "uba", email: "uba@gmail.com",phone:"0805543544565",last_login_date: "thursday"},
         {id: "15", firstname: "ebuka", lastname: "interswitch", email: "ebuka@gmail.com",phone:"0905555334242",last_login_date: "sunday"},
-        {id: "16", firstname: "kc", lastname: "atiku", email: "atiku@gmail.com",phone:"0704443335565",last_login_date: "wednessday"},
-        {id: "17", firstname: "oyedepo", lastname: "buhari", email: "buhari@gmail.com",phone:"080555643221",last_login_date: "wednessday"},
+        {id: "16", firstname: "kc", lastname: "atiku", email: "atiku@gmail.com",phone:"0704443335565",last_login_date: "wednesday"},
+        {id: "17", firstname: "oyedepo", lastname: "buhari", email: "buhari@gmail.com",phone:"080555643221",last_login_date: "wednesday"},
         {id: "18", firstname: "adeboye", lastname: "kalu", email: "kalu@gmail.com",phone:"080555444565",last_login_date: "tuesday"},
         {id: "19", firstname: "bisi", lastname: "kali", email: "kali@gmail.com",phone:"0880007777",last_login_date: "monday"},
         {id: "20", firstname: "anthony", lastname: "rock", email: "rock@gmail.com",phone:"1234567890",last_login_date: "friday"},
@@ -47,6 +50,7 @@ class Table extends Component {
             user: this.oldData
         }
     }
+
     search(e){
         const g = e.target.value;
         if (!g) {
@@ -82,7 +86,7 @@ class Table extends Component {
         let newData6 = (((newData1.concat(newData2)).concat(newData3)).concat(newData4)).concat(newData5)
 
         let newData = newData6.filter((item, pos, self)=> {
-            return self.indexOf(item) == pos;
+            return self.indexOf(item) === pos;
         })
 
 
@@ -122,7 +126,7 @@ class Table extends Component {
         <article className="col-10 content">
             <div className="center">
             <div className="col-12">
-
+                <div className='inline-block'>
                 <h2 className="inline" >Registered Customers</h2>
                 <select onChange={this.get}>
                 <option value=''>All</option>
@@ -134,6 +138,13 @@ class Table extends Component {
                 <option value='saturday'>Saturday</option>
                 <option value='sunday'>Sunday</option>
                 </select>
+                </div>
+                
+                    &nbsp; &nbsp;
+                <div className='col-2 inline'>
+                    <Datefilter options={['Today', 'Yesterday', 'Last 7 Days', 'Last 30 Days', 'This Month', 'Last Month', 'Custom Range']}/>
+                </div>
+                                
 
                 <div className="search">
                 <input  type="text" name="text" onKeyUp={this.search} onKeyDown={this.search} placeholder="Search Day"/>
@@ -163,7 +174,13 @@ class Table extends Component {
                         </thead>
                         <tbody>
                             {this.state.user.length===0 && <tr><td colSpan='6' className="border-left border-right"><h1 className='h1s'>No Data Found</h1></td></tr>      }
-                        { this.state.user.map(o => <Td key={o.id} user={o} />) }
+                          
+                        { this.state.user.map((o) =>{
+                            
+                                var result =  <Td key={o.id} user={o} />
+
+                                return result
+                        }) }
                          
 
                         </tbody>
@@ -185,6 +202,10 @@ class Table extends Component {
             </article>
         </section>
        <Footer/>
+
+
+       
+
       </div>
     );
   }
